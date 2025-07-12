@@ -74,7 +74,7 @@ listWeather.addEventListener("click", (e) => {
   container.innerHTML = "";
   if (e.target.nodeName === "LI") {
     fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK/${e.target.firstElementChild.textContent}/?key=${api_key}`
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${input},${country}/${e.target.firstElementChild.textContent}/?key=${api_key}`
     )
       .then((response) => response.json())
       .then((data) => {
